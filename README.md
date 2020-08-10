@@ -1,5 +1,7 @@
 # README
 
+This is the repo of the BDD Calybara course
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
@@ -28,3 +30,4 @@ check status
 add the files and new changes to track
 commit the changes/disgard the changes as well
 Save/Push your code to online repositories   - Github
+
