@@ -31,3 +31,8 @@ add the files and new changes to track
 commit the changes/disgard the changes as well
 Save/Push your code to online repositories   - Github
 
+
+RSPEC and Capybara
+-write out the scenario in a test file
+-First step - feature will fail
+-build the features one by one till the test passes
