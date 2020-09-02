@@ -39,7 +39,9 @@ RSPEC and Capybara
 
 *************************************************
 Process for creating articles feature test and feature
+-Install the RSpec and Capybara gems  
 
+    ** Best practice is to clone a branch***
 - Create a branch to do the developement work
 - write the feature test
 - Build the feature to make the test pass one by one
@@ -102,7 +104,9 @@ mkdir spec/features
 In that folder create a new file called creating_article_spec.rb: 
 Open that file and add the following:
 
-require "rails_helper"
+****require "rails_helper" ***** must always be included as it sets up Capybara-Rails integration in spec/rails_helper.rb:
+require 'capybara/rspec' is also needed to set up Capybara-RSpec integration in spec/spec_helper.rbc
+***
 RSpec.feature "Creating Articles" do 
 scenario "A user creates a new article" do
 visit "/"
@@ -110,6 +114,7 @@ click_link "New Article"
 fill_in "Title", with: "Creating a blog" 
 fill_in "Body", with: "Lorem Ipsum" 
 click_button "Create Article"
+
 expect(page).to have_content("Article has been created")
 expect(page.current_path).to eq(articles_path) 
 end
